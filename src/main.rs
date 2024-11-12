@@ -1,5 +1,7 @@
-use rustc_version::version;
+use rustc_version::{version, Version};
+use std::env;
 
 fn main() {
-    println!("rustc version: {}", version().unwrap());
+    let expected_version = env::args().nth(1).unwrap();
+    assert_eq!(version().unwrap(), Version::parse(&expected_version).unwrap());
 }
