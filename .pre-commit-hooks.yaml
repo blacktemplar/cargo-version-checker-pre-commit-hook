@@ -1,0 +1,5 @@
+- id: rust-version-checker
+  name: Rust Version Checker
+  description: 'Dummy hook that prints the rustc version used to compile the hook'
+  entry: cargo-version-checker-pre-commit-hook
+  language: rust
